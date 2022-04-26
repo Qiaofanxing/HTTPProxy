@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 #include "myproxyserver.h"
+#include <QMutex>
+#include <zlib.h>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -19,8 +21,14 @@ public:
 private:
     Ui::MainWindow *ui;
     myProxyServer server;
-
+    void _InitKSService();
+    void _InitZLIB();
+    QByteArray Compress(QByteArray postBody);
+    QByteArray UnCompress(QByteArray postBody);
 private slots:
     void ChangeUIText(QByteArray cmd);
 };
+
+extern QMutex mutex;
+
 #endif // MAINWINDOW_H

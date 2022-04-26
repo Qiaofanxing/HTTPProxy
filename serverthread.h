@@ -4,6 +4,8 @@
 #include <QThread>
 #include <QTcpSocket>
 #include <QNetworkRequest>
+#include "mainwindow.h"
+
 
 class HttpHeader
 {
@@ -30,8 +32,9 @@ private:
     int socketDescriptor;
     QString text;
     void ParseHttpHead(QString*,QNetworkRequest*,HttpHeader*);
-private slots:
+    QByteArray uncompressGZip(const QByteArray &data);
 
+private slots:
 
 signals:
     void error(QTcpSocket::SocketError socketError);
