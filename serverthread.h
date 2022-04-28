@@ -4,7 +4,6 @@
 #include <QThread>
 #include <QTcpSocket>
 #include <QNetworkRequest>
-#include "mainwindow.h"
 
 
 class HttpHeader

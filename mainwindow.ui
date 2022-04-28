@@ -7,36 +7,710 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>600</height>
+    <height>590</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QTextBrowser" name="text_output">
+   <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>30</y>
-      <width>681</width>
-      <height>501</height>
+      <x>10</x>
+      <y>340</y>
+      <width>781</width>
+      <height>171</height>
      </rect>
     </property>
+    <property name="title">
+     <string>信息</string>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="0" column="0">
+      <widget class="QTextBrowser" name="text_output">
+       <property name="cursor" stdset="0">
+        <cursorShape>IBeamCursor</cursorShape>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::DefaultContextMenu</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #293134;
+color: #e0e2e4;</string>
+       </property>
+       <property name="openLinks">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>19</y>
+      <width>761</width>
+      <height>321</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>设置</string>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QTabWidget" name="tabWidgetOPTIONS">
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="tab1">
+        <attribute name="title">
+         <string>代理服务器设置</string>
+        </attribute>
+        <widget class="Line" name="line">
+         <property name="geometry">
+          <rect>
+           <x>320</x>
+           <y>10</y>
+           <width>16</width>
+           <height>240</height>
+          </rect>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="checkBox_FENCI_isopen">
+         <property name="geometry">
+          <rect>
+           <x>360</x>
+           <y>10</y>
+           <width>71</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>启用分词</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QWidget" name="">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>190</y>
+           <width>286</width>
+           <height>52</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_7">
+          <item>
+           <widget class="QLabel" name="label_8">
+            <property name="text">
+             <string>当前连接数：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLCDNumber" name="lcdNumber_connect">
+            <property name="minimumSize">
+             <size>
+              <width>100</width>
+              <height>50</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="">
+         <property name="geometry">
+          <rect>
+           <x>370</x>
+           <y>190</y>
+           <width>341</width>
+           <height>52</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_6">
+          <item>
+           <widget class="QLabel" name="label_9">
+            <property name="text">
+             <string>发现关键词的网页：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLCDNumber" name="lcdNumber_FENCI">
+            <property name="minimumSize">
+             <size>
+              <width>100</width>
+              <height>50</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="">
+         <property name="geometry">
+          <rect>
+           <x>9</x>
+           <y>35</y>
+           <width>271</width>
+           <height>71</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <item>
+             <widget class="QLabel" name="label_1">
+              <property name="text">
+               <string>代理服务器IP：</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_1">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QComboBox" name="comboBox_serverIP"/>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>56</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <widget class="QLabel" name="label_2">
+              <property name="text">
+               <string>端口：</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_2">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="spinBox_serverPort">
+              <property name="minimum">
+               <number>1024</number>
+              </property>
+              <property name="maximum">
+               <number>65535</number>
+              </property>
+              <property name="value">
+               <number>22222</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="">
+         <property name="geometry">
+          <rect>
+           <x>370</x>
+           <y>50</y>
+           <width>341</width>
+           <height>102</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <item>
+             <widget class="QLabel" name="label">
+              <property name="text">
+               <string>分词方式：</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_3">
+              <item>
+               <widget class="QLabel" name="label_3">
+                <property name="text">
+                 <string>快速过滤</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSlider" name="horizontalSlider_FENCI_select">
+                <property name="maximum">
+                 <number>99</number>
+                </property>
+                <property name="singleStep">
+                 <number>99</number>
+                </property>
+                <property name="pageStep">
+                 <number>99</number>
+                </property>
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_4">
+                <property name="text">
+                 <string>精细分词</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_4">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_5">
+            <item>
+             <widget class="QLabel" name="label_5">
+              <property name="text">
+               <string>发现敏感词：</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_3">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="radioButton_refuseHTML">
+              <property name="text">
+               <string>禁止访问</string>
+              </property>
+              <property name="checked">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_4">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="radioButton_onlyLOG">
+              <property name="text">
+               <string>允许访问</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="tab2">
+        <attribute name="title">
+         <string>快速过滤系统设置</string>
+        </attribute>
+        <widget class="QCheckBox" name="checkBox_KS_Details">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>50</y>
+           <width>91</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>输出详细信息</string>
+         </property>
+        </widget>
+        <widget class="Line" name="line_2">
+         <property name="geometry">
+          <rect>
+           <x>260</x>
+           <y>10</y>
+           <width>20</width>
+           <height>231</height>
+          </rect>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="checkBox_KS_savehistory">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>90</y>
+           <width>101</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>记录日志文件</string>
+         </property>
+        </widget>
+        <widget class="QWidget" name="layoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>140</y>
+           <width>198</width>
+           <height>70</height>
+          </rect>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_3">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_6">
+            <property name="text">
+             <string>扫描模式:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QRadioButton" name="radioButton_KSMODE_0">
+            <property name="text">
+             <string>正常扫描模式</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QRadioButton" name="radioButton_KSMODE_1">
+            <property name="text">
+             <string>形变扫描模式</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QRadioButton" name="radioButton_KSMODE_2">
+            <property name="text">
+             <string>拼音扫描模式</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QRadioButton" name="radioButton_KSMODE_3">
+            <property name="text">
+             <string>校对扫描模式</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="">
+         <property name="geometry">
+          <rect>
+           <x>310</x>
+           <y>10</y>
+           <width>421</width>
+           <height>241</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_8">
+            <item>
+             <widget class="QPushButton" name="pushButton_KS_load">
+              <property name="text">
+               <string>读取词库</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_KS_save">
+              <property name="text">
+               <string>保存修改</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_KS_addLine">
+              <property name="text">
+               <string>添加行</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_KS_delLine">
+              <property name="text">
+               <string>删除行</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_KS_inLine">
+              <property name="text">
+               <string>插入行</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QTableView" name="tableView_KS"/>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="tab3">
+        <attribute name="title">
+         <string>精细分词系统设置</string>
+        </attribute>
+        <widget class="QPushButton" name="pushButton_NLPIR_import">
+         <property name="geometry">
+          <rect>
+           <x>210</x>
+           <y>80</y>
+           <width>81</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>导入用户词库</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_7">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>140</y>
+           <width>551</width>
+           <height>101</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>1. 如果用户词有空格，需要采用[]括起来，例如： [Bill Clinton] nrf
+2. 如果需要该用户词作为文章的关键词输出，必须用户词性标注为：key,如：科学发展观 key
+3. 如果将一个词是人名，同时又希望作为关键词输出，则需要标注为key_nr，如 钟南山 key_nr
+4. 如果将一个词是地名，同时又希望作为关键词输出，则需要标注为key_ns，如 钓鱼岛 key_ns
+5. 如果将一个词是机构名，同时又希望作为关键词输出，则需要标注为key_nr，如 国安委 key_nt</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_openNLPIRlog">
+         <property name="geometry">
+          <rect>
+           <x>600</x>
+           <y>140</y>
+           <width>75</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>打开日志</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_clearNLPIRlog">
+         <property name="geometry">
+          <rect>
+           <x>600</x>
+           <y>190</y>
+           <width>75</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>清空日志</string>
+         </property>
+        </widget>
+        <widget class="Line" name="line_3">
+         <property name="geometry">
+          <rect>
+           <x>543</x>
+           <y>30</y>
+           <width>20</width>
+           <height>211</height>
+          </rect>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_NLPIR_help">
+         <property name="geometry">
+          <rect>
+           <x>600</x>
+           <y>90</y>
+           <width>75</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>帮助</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+     </item>
+    </layout>
    </widget>
   </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>800</width>
-     <height>22</height>
-    </rect>
+  <widget class="QToolBar" name="toolbar">
+   <property name="windowTitle">
+    <string/>
    </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_start"/>
+   <addaction name="separator"/>
+   <addaction name="action_stopServer"/>
+   <addaction name="separator"/>
+   <addaction name="action_reboot"/>
+   <addaction name="separator"/>
+   <addaction name="action_mini"/>
+   <addaction name="separator"/>
+   <addaction name="action_clearinfotext"/>
+   <addaction name="separator"/>
+   <addaction name="action_about"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="action_start">
+   <property name="icon">
+    <iconset resource="image.qrc">
+     <normaloff>:/image/QResource/start.svg</normaloff>:/image/QResource/start.svg</iconset>
+   </property>
+   <property name="text">
+    <string>启动</string>
+   </property>
+  </action>
+  <action name="action_clearinfotext">
+   <property name="icon">
+    <iconset resource="image.qrc">
+     <normaloff>:/image/QResource/delete.svg</normaloff>:/image/QResource/delete.svg</iconset>
+   </property>
+   <property name="text">
+    <string>清空信息栏</string>
+   </property>
+  </action>
+  <action name="action_stopServer">
+   <property name="icon">
+    <iconset resource="image.qrc">
+     <normaloff>:/image/QResource/stop.svg</normaloff>:/image/QResource/stop.svg</iconset>
+   </property>
+   <property name="text">
+    <string>停止</string>
+   </property>
+  </action>
+  <action name="action_reboot">
+   <property name="icon">
+    <iconset resource="image.qrc">
+     <normaloff>:/image/QResource/reboot.svg</normaloff>:/image/QResource/reboot.svg</iconset>
+   </property>
+   <property name="text">
+    <string>重启</string>
+   </property>
+  </action>
+  <action name="action_mini">
+   <property name="icon">
+    <iconset resource="image.qrc">
+     <normaloff>:/image/QResource/mini.svg</normaloff>:/image/QResource/mini.svg</iconset>
+   </property>
+   <property name="text">
+    <string>最小化</string>
+   </property>
+  </action>
+  <action name="action_about">
+   <property name="icon">
+    <iconset resource="image.qrc">
+     <normaloff>:/image/QResource/about.svg</normaloff>:/image/QResource/about.svg</iconset>
+   </property>
+   <property name="text">
+    <string>关于</string>
+   </property>
+  </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="image.qrc"/>
+ </resources>
  <connections/>
 </ui>

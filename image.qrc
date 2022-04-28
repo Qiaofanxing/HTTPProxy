@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/image">
+        <file>QResource/delete.svg</file>
+        <file>QResource/start.svg</file>
+        <file>QResource/stop.svg</file>
+        <file>QResource/reboot.svg</file>
+        <file>QResource/icon.svg</file>
+        <file>QResource/mini.svg</file>
+        <file>QResource/about.svg</file>
+    </qresource>
+</RCC>
