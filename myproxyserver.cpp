@@ -16,7 +16,7 @@ myProxyServer::~myProxyServer()
             if(allThread.at(i)->isRunning())
             {
                 allThread.at(i)->quit();
-                allThread.at(i)->wait();
+            //    allThread.at(i)->wait();
                 allThread.remove(i);
                 i--;
             }

@@ -240,7 +240,7 @@ void MainWindow::_StopServer()
     if(server.isListening())
     {
         server.close();
-        server.closeAllThread();
+     //   server.closeAllThread();
     }
     else
     {

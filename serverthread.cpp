@@ -228,6 +228,7 @@ QString tmpQStrx = QString::fromLatin1(tmpQStr.toLatin1());
                     }
                     else
                     {
+                        qDebug()<<NLPIR_ParagraphProcess(htmlbody.toUtf8(),1);
                         LOGmutex.lock();
                         NLPLog.write(QDateTime::currentDateTime().toString("yyyy.MM.dd hh:mm:ss.zzz ddd").toUtf8());
                         NLPLog.write("\n");
