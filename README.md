@@ -9,6 +9,7 @@
 2. 不支持HTTPS
 3. 第三方分词库需要每月更新授权，目前内置的授权已经过期
 4. 代码可读性差，逻辑实现不通
+5. 代理需要手动在系统设置中进行设置，指向自定义的端口
 
 具体踩坑记录见word文档[详细文档.docx](https://github.com/Qiaofanxing/HTTPProxy/files/11279290/default.docx)
 
